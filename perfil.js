@@ -1,6 +1,18 @@
 const form =
 document.getElementById("profileForm");
 
+const previewSection =
+document.getElementById("previewSection");
+
+const approvalSection =
+document.getElementById("approvalSection");
+
+const historySection =
+document.getElementById("historial");
+
+const surveySection =
+document.getElementById("opiniones");
+
 function showToast(title,message){
 
 const toast =
@@ -38,88 +50,325 @@ toast.classList.add("hidden");
 
 }
 
-form.addEventListener("submit",(e)=>{
+function agregarHistorial(texto){
+
+const historyContainer =
+document.getElementById(
+"historyContainer"
+);
+
+if(!historyContainer) return;
+
+const card =
+document.createElement("div");
+
+card.classList.add(
+"history-card"
+);
+
+card.innerHTML = `
+
+<h3>${texto}</h3>
+
+<p>
+${new Date().toLocaleDateString()}
+</p>
+
+<span class="pending">
+
+Pendiente
+
+</span>
+
+`;
+
+historyContainer.prepend(card);
+
+}
+
+function cargarEmprendimiento(){
+
+const saved =
+sessionStorage.getItem(
+"vertexBusiness"
+);
+
+if(!saved) return;
+
+const business =
+JSON.parse(saved);
+
+previewSection.classList.remove(
+"hidden"
+);
+
+approvalSection.classList.remove(
+"hidden"
+);
+
+historySection.classList.remove(
+"hidden"
+);
+
+surveySection.classList.remove(
+"hidden"
+);
+
+document.getElementById(
+"previewName"
+).textContent =
+business.name;
+
+document.getElementById(
+"previewDescription"
+).textContent =
+business.desc;
+
+if(business.website){
+
+document.getElementById(
+"siteLink"
+).href =
+business.website;
+
+}
+
+if(business.instagram){
+
+document.getElementById(
+"igLink"
+).href =
+business.instagram;
+
+}
+
+if(business.facebook){
+
+document.getElementById(
+"fbLink"
+).href =
+business.facebook;
+
+}
+
+if(business.whatsapp){
+
+document.getElementById(
+"waLink"
+).href =
+business.whatsapp;
+
+}
+
+if(business.banner){
+
+document.getElementById(
+"previewBanner"
+).src =
+business.banner;
+
+}
+
+}
+
+form.addEventListener(
+"submit",
+function(e){
 
 e.preventDefault();
 
-const name =
-document.getElementById("businessName").value;
+const business = {
 
-const desc =
-document.getElementById("businessDesc").value;
+name:
+document.getElementById(
+"businessName"
+).value,
 
-const website =
-document.getElementById("website").value;
+desc:
+document.getElementById(
+"businessDesc"
+).value,
 
-const instagram =
-document.getElementById("instagram").value;
+website:
+document.getElementById(
+"website"
+).value,
 
-const facebook =
-document.getElementById("facebook").value;
+instagram:
+document.getElementById(
+"instagram"
+).value,
 
-const whatsapp =
-document.getElementById("whatsapp").value;
+facebook:
+document.getElementById(
+"facebook"
+).value,
+
+whatsapp:
+document.getElementById(
+"whatsapp"
+).value,
+
+banner:null
+
+};
 
 const banner =
-document.getElementById("bannerInput").files[0];
+document.getElementById(
+"bannerInput"
+).files[0];
 
-document.getElementById("previewName")
-.textContent = name;
+function guardar(){
 
-document.getElementById("previewDescription")
-.textContent = desc;
+const existe =
+sessionStorage.getItem(
+"vertexBusiness"
+);
 
-if(website){
+sessionStorage.setItem(
+"vertexBusiness",
+JSON.stringify(
+business
+)
+);
 
-document.getElementById("siteLink")
-.href = website;
+if(existe){
 
-}
+agregarHistorial(
+"Información actualizada"
+);
 
-if(instagram){
+showToast(
+"Perfil actualizado",
+"Los cambios fueron guardados."
+);
 
-document.getElementById("igLink")
-.href = instagram;
+}else{
 
-}
-
-if(facebook){
-
-document.getElementById("fbLink")
-.href = facebook;
-
-}
-
-if(whatsapp){
-
-document.getElementById("waLink")
-.href = whatsapp;
-
-}
-
-if(banner){
-
-const reader = new FileReader();
-
-reader.onload = function(e){
-
-document.getElementById("previewBanner")
-.src = e.target.result;
-
-}
-
-reader.readAsDataURL(banner);
-
-}
-
-document.getElementById("previewSection")
-.classList.remove("hidden");
+agregarHistorial(
+"Emprendimiento creado"
+);
 
 showToast(
 "Emprendimiento creado",
 "Tu perfil fue creado correctamente."
 );
 
+}
+
+cargarEmprendimiento();
+
 form.reset();
 
+}
+
+if(banner){
+
+const reader =
+new FileReader();
+
+reader.onload =
+function(e){
+
+business.banner =
+e.target.result;
+
+guardar();
+
+};
+
+reader.readAsDataURL(
+banner
+);
+
+}else{
+
+const saved =
+sessionStorage.getItem(
+"vertexBusiness"
+);
+
+if(saved){
+
+const old =
+JSON.parse(saved);
+
+business.banner =
+old.banner;
+
+}
+
+guardar();
+
+}
+
 });
+
+document.addEventListener(
+"click",
+function(e){
+
+if(
+e.target &&
+e.target.id ===
+"editBusinessBtn"
+){
+
+const saved =
+sessionStorage.getItem(
+"vertexBusiness"
+);
+
+if(!saved) return;
+
+const business =
+JSON.parse(saved);
+
+document.getElementById(
+"businessName"
+).value =
+business.name;
+
+document.getElementById(
+"businessDesc"
+).value =
+business.desc;
+
+document.getElementById(
+"website"
+).value =
+business.website || "";
+
+document.getElementById(
+"instagram"
+).value =
+business.instagram || "";
+
+document.getElementById(
+"facebook"
+).value =
+business.facebook || "";
+
+document.getElementById(
+"whatsapp"
+).value =
+business.whatsapp || "";
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+showToast(
+"Modo edición",
+"Puedes modificar tu emprendimiento."
+);
+
+}
+
+});
+
+cargarEmprendimiento();
