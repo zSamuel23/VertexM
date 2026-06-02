@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Perfil | Vertex</title>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet"
+href="styles.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -24,20 +30,52 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <div class="navbar">
 
-<div class="logo">VERTEX</div>
+<div class="logo">
+
+VERTEX
+
+</div>
 
 <nav>
 
-<a href="index.html">Inicio</a>
-<a href="/index.html#servicios">Servicios</a>
-<a href="/index.html#planes">Planes</a>
-<a href="/index.html#contacto">Contacto</a>
-<a href="perfil.html" class="active-link">Perfil</a>
+<a href="index.html">
+Inicio
+</a>
+
+<a href="/index.html#servicios">
+Servicios
+</a>
+
+<a href="/index.html#planes">
+Planes
+</a>
+
+<a href="/index.html#contacto">
+Contacto
+</a>
+
+<a href="perfil.html"
+class="active-link">
+
+Perfil
+
+</a>
+
+<a href="#historial">
+Historial
+</a>
+
+<a href="#opiniones">
+Opiniones
+</a>
 
 </nav>
 
-<a href="/index.html" class="btn-nav">
+<a href="index.html"
+class="btn-nav">
+
 Volver
+
 </a>
 
 </div>
@@ -49,10 +87,16 @@ Volver
 <div class="perfil-card">
 
 <div class="profile-avatar">
+
 <i class="fa-regular fa-user"></i>
+
 </div>
 
-<h1>Crear Perfil</h1>
+<h1>
+
+Crear Perfil
+
+</h1>
 
 <form id="profileForm">
 
@@ -98,7 +142,8 @@ type="file"
 id="bannerInput"
 accept="image/*">
 
-<button type="submit">
+<button
+type="submit">
 
 Guardar Perfil
 
@@ -109,6 +154,8 @@ Guardar Perfil
 </div>
 
 </section>
+
+<!-- PREVIEW DEL EMPRENDIMIENTO -->
 
 <section
 id="previewSection"
@@ -135,7 +182,20 @@ Aquí aparecerá la descripción.
 
 </p>
 
-<a href="#" class="preview-btn">
+<div class="business-actions">
+
+<button
+id="editBusinessBtn"
+class="edit-btn">
+
+Editar Emprendimiento
+
+</button>
+
+</div>
+
+<a href="#"
+class="preview-btn">
 
 Ver más
 
@@ -144,19 +204,27 @@ Ver más
 <div class="preview-socials">
 
 <a id="siteLink" href="#">
+
 <i class="fa-solid fa-globe"></i>
+
 </a>
 
 <a id="igLink" href="#">
+
 <i class="fa-brands fa-instagram"></i>
+
 </a>
 
 <a id="fbLink" href="#">
+
 <i class="fa-brands fa-facebook"></i>
+
 </a>
 
 <a id="waLink" href="#">
+
 <i class="fa-brands fa-whatsapp"></i>
+
 </a>
 
 </div>
@@ -168,10 +236,14 @@ Ver más
 </section>
   <!-- ESTADO DE APROBACIÓN -->
 
-<section class="approval-status">
+<section
+id="approvalSection"
+class="approval-status hidden">
 
 <h2>
+
 Estado del Emprendimiento
+
 </h2>
 
 <div class="status-card">
@@ -184,7 +256,7 @@ Pendiente de aprobación
 
 <p>
 
-Todos los cambios realizados en tu emprendimiento deberán ser revisados y aprobados por el administrador antes de hacerse públicos.
+Todos los cambios realizados en tu emprendimiento serán revisados por el administrador antes de hacerse públicos.
 
 </p>
 
@@ -194,20 +266,30 @@ Todos los cambios realizados en tu emprendimiento deberán ser revisados y aprob
 
 <!-- HISTORIAL -->
 
-<section id="historial" class="history-section">
+<section
+id="historial"
+class="history-section hidden">
 
 <h2>
+
 Historial de Publicaciones
+
 </h2>
+
+<div id="historyContainer">
 
 <div class="history-card">
 
 <h3>
-Cambio de Banner Principal
+
+Emprendimiento creado
+
 </h3>
 
 <p>
-15/06/2026
+
+Registro inicial
+
 </p>
 
 <span class="approved">
@@ -218,32 +300,20 @@ Aprobado
 
 </div>
 
-<div class="history-card">
-
-<h3>
-Promoción Especial de Temporada
-</h3>
-
-<p>
-20/06/2026
-</p>
-
-<span class="pending">
-
-Pendiente
-
-</span>
-
 </div>
 
 </section>
 
 <!-- OPINIONES -->
 
-<section id="opiniones" class="survey-section">
+<section
+id="opiniones"
+class="survey-section hidden">
 
 <h2>
+
 Opiniones y Propuestas
+
 </h2>
 
 <form class="survey-form">
@@ -253,7 +323,7 @@ placeholder="¿Qué te gustaría mejorar de Vertex?">
 </textarea>
 
 <textarea
-placeholder="¿Qué nueva función te gustaría agregar?">
+placeholder="¿Qué función te gustaría agregar?">
 </textarea>
 
 <select>
@@ -290,14 +360,22 @@ Enviar Opinión
 
 </section>
 
+<!-- FOOTER -->
+
 <footer>
 
 <div class="footer-left">
 
-<h3>VERTEX</h3>
+<h3>
+
+VERTEX
+
+</h3>
 
 <p>
+
 Impulsando el crecimiento de emprendedores mediante innovación digital.
+
 </p>
 
 </div>
@@ -305,34 +383,47 @@ Impulsando el crecimiento de emprendedores mediante innovación digital.
 <div class="footer-icons">
 
 <i class="fa-brands fa-instagram"></i>
+
 <i class="fa-brands fa-facebook"></i>
+
 <i class="fa-brands fa-whatsapp"></i>
+
 <i class="fa-regular fa-envelope"></i>
 
 </div>
 
 </footer>
 
-<script src="perfil.js"></script>
+<!-- TOAST -->
 
+<div
+id="toast"
+class="toast hidden">
 
-<!-- NOTIFICACION -->
-
-<div id="toast" class="toast hidden">
-
-<i id="toastIcon" class="fa-solid fa-circle-check"></i>
+<i
+id="toastIcon"
+class="fa-solid fa-circle-check">
+</i>
 
 <div class="toast-content">
 
-<h4 id="toastTitle">Éxito</h4>
+<h4 id="toastTitle">
+
+Éxito
+
+</h4>
 
 <p id="toastMessage">
+
 Acción realizada correctamente.
+
 </p>
 
 </div>
 
 </div>
+
+<script src="perfil.js"></script>
 
 </body>
 </html>
