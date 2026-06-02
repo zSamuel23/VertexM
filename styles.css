@@ -7,16 +7,16 @@ scroll-behavior:smooth;
 
 :root{
 
-bg:#030f2b;
-bg2:#0a1736;
-card:#182642;
+bg:030f2b;
+bg2:0a1736;
+card:182642;
 
-primary:#0088ff;
-secondary:#02e1ff;
-accent:#1466b8;
+primary:0088ff;
+secondary:02e1ff;
+accent:1466b8;
 
-text:#ffffff;
-text2:#9db0d6;
+text:ffffff;
+text2:9db0d6;
 
 border:rgba(255,255,255,.08);
 
@@ -26,9 +26,9 @@ body{
 
 font-family:'Inter',sans-serif;
 
-background:var(--bg);
+background:var(bg);
 
-color:var(--text);
+color:var(text);
 
 overflow-x:hidden;
 
@@ -97,7 +97,7 @@ position:relative;
 
 text-decoration:none;
 
-color:var(--text2);
+color:var(text2);
 
 font-weight:500;
 
@@ -117,7 +117,7 @@ bottom:-8px;
 width:0%;
 height:2px;
 
-background:#0088ff;
+background:0088ff;
 
 transition:.3s;
 
@@ -234,7 +234,7 @@ margin-bottom:25px;
 width:8px;
 height:8px;
 
-background:#14b8a6;
+background:14b8a6;
 
 border-radius:50%;
 
@@ -282,7 +282,7 @@ linear-gradient(
 90deg,
 0088ff,
 02e1ff,
-#0088ff
+0088ff
 );
 
 -webkit-background-clip:text;
@@ -296,7 +296,7 @@ font-size:22px;
 
 line-height:1.8;
 
-color:var(--text2);
+color:var(text2);
 
 max-width:600px;
 
@@ -511,8 +511,8 @@ flex:1;
 background:
 linear-gradient(
 180deg,
-#0088ff,
-#02e1ff
+0088ff,
+02e1ff
 );
 
 border-radius:
@@ -544,7 +544,7 @@ gap:15px;
 
 .stat-card{
 
-background:#10213f;
+background:10213f;
 
 padding:18px;
 
@@ -552,8 +552,8 @@ border-radius:16px;
 
 }
 
-.green{color:#0088ff;}
-.purple{color:#02e1ff;}
+.green{color:0088ff;}
+.purple{color:02e1ff;}
 
 /* ==========================================
    ABOUT
@@ -590,7 +590,7 @@ border-radius:18px;
 background:
 rgba(59,130,246,.08);
 
-color:#60a5fa;
+color:60a5fa;
 
 font-size:24px;
 
@@ -606,7 +606,7 @@ margin-bottom:25px;
 
 .about h2 span{
 
-color:#3b82f6;
+color:3b82f6;
 
 }
 
@@ -616,7 +616,7 @@ font-size:26px;
 
 line-height:1.8;
 
-color:var(--text2);
+color:var(text2);
 
 }
 
@@ -646,7 +646,7 @@ text-align:center;
 
 font-size:22px;
 
-color:var(--text2);
+color:var(text2);
 
 margin-bottom:70px;
 
@@ -668,8 +668,8 @@ gap:25px;
 background:
 linear-gradient(
 145deg,
-#182642,
-#111c34
+182642,
+111c34
 );
 
 padding:45px;
@@ -727,7 +727,7 @@ transform:
 translateY(-15px)
 scale(1.03);
 
-border-color:#3b82f6;
+border-color:3b82f6;
 
 box-shadow:
 0 25px 60px
@@ -744,8 +744,8 @@ margin-bottom:25px;
 background:
 linear-gradient(
 135deg,
-#3b82f6,
-#02e1ff
+3b82f6,
+02e1ff
 );
 
 -webkit-background-clip:text;
@@ -784,7 +784,7 @@ margin-bottom:15px;
 
 font-size:22px;
 
-color:var(--text2);
+color:var(text2);
 
 margin-bottom:60px;
 
@@ -807,7 +807,7 @@ margin:auto;
 
 .price-card{
 
-background:#1b2944;
+background:1b2944;
 
 padding:35px;
 
@@ -855,7 +855,7 @@ margin-bottom:5px;
 
 font-size:16px;
 
-color:var(--text2);
+color:var(text2);
 
 }
 
@@ -873,7 +873,7 @@ margin-bottom:30px;
 
 padding:10px 0;
 
-color:var(--text2);
+color:var(text2);
 
 font-size:16px;
 
@@ -883,7 +883,7 @@ font-size:16px;
 
 content:"✓";
 
-color:#02e1ff;
+color:02e1ff;
 
 font-weight:bold;
 
@@ -942,7 +942,7 @@ rgba(59,130,246,.20);
 
 .featured{
 
-border:1px solid #0088ff;
+border:1px solid 0088ff;
 
 animation:
 premiumGlow 3s infinite alternate;
@@ -981,7 +981,7 @@ left:50%;
 
 transform:translateX(-50%);
 
-background:#0088ff;
+background:0088ff;
 
 padding:7px 18px;
 
@@ -1009,7 +1009,7 @@ border:none;
 
 border-radius:14px;
 
-background:#0088ff;
+background:0088ff;
 
 color:white;
 
@@ -1025,7 +1025,7 @@ transition:.3s;
 
 .plan-btn:hover{
 
-background: #02e1ff;
+background: 02e1ff;
 
 transform:scale(1.03);
 
@@ -1070,8 +1070,8 @@ gap:25px;
 background:
 linear-gradient(
 145deg,
-#182642,
-#111c34
+182642,
+111c34
 );
 
 border-radius:24px;
@@ -1092,7 +1092,7 @@ cursor:pointer;
 transform:
 translateY(-12px);
 
-border-color:#0088ff;
+border-color:0088ff;
 
 box-shadow:
 0 25px 60px
@@ -1128,7 +1128,7 @@ padding:25px;
 
 .project-content small{
 
-color:#02e1ff;
+color:02e1ff;
 
 }
 
@@ -1142,7 +1142,7 @@ font-size:28px;
 
 .project-content p{
 
-color:var(--text2);
+color:var(text2);
 
 line-height:1.7;
 
@@ -1154,7 +1154,7 @@ margin-bottom:15px;
 
 text-decoration:none;
 
-color:#0088ff;
+color:0088ff;
 
 font-weight:600;
 
@@ -1220,7 +1220,7 @@ font-size:22px;
 
 line-height:1.8;
 
-color:var(--text2);
+color:var(text2);
 
 margin-bottom:20px;
 
@@ -1288,8 +1288,8 @@ border-radius:50%;
 background:
 linear-gradient(
 135deg,
-#0088ff,
-#02e1ff
+0088ff,
+02e1ff
 );
 
 position:relative;
@@ -1393,7 +1393,7 @@ margin-bottom:25px;
 
 .team-info h2 span{
 
-color:#3b82f6;
+color:3b82f6;
 
 }
 
@@ -1403,7 +1403,7 @@ font-size:22px;
 
 line-height:1.8;
 
-color:var(--text2);
+color:var(text2);
 
 max-width:900px;
 
@@ -1441,7 +1441,7 @@ margin-bottom:20px;
 
 font-size:22px;
 
-color:var(--text2);
+color:var(text2);
 
 margin-bottom:50px;
 
@@ -1460,7 +1460,7 @@ gap:20px;
 .contact input,
 .contact textarea{
 
-background:#182642;
+background:182642;
 
 padding:20px;
 
@@ -1496,8 +1496,8 @@ border-radius:18px;
 background:
 linear-gradient(
 135deg,
-#0088ff,
-#02e1ff
+0088ff,
+02e1ff
 );
 
 color:white;
@@ -1578,7 +1578,7 @@ justify-content:center;
 
 border-radius:18px;
 
-background:#0088ff;
+background:0088ff;
 
 cursor:pointer;
 
@@ -1590,7 +1590,7 @@ transition:.35s;
 
 .footer-icons i:hover{
 
-background:#02e1ff;
+background:02e1ff;
 
 transform:
 translateY(-6px);
@@ -1741,7 +1741,7 @@ justify-content:center;
 width:100%;
 max-width:800px;
 
-background:#1b2944;
+background:1b2944;
 
 padding:40px;
 
@@ -1766,8 +1766,8 @@ justify-content:center;
 background:
 linear-gradient(
 135deg,
-#0088ff,
-#02e1ff
+0088ff,
+02e1ff
 );
 
 }
@@ -1802,7 +1802,7 @@ gap:15px;
 
 padding:18px;
 
-background:#10213f;
+background:10213f;
 
 border:none;
 
@@ -1831,8 +1831,8 @@ border-radius:14px;
 background:
 linear-gradient(
 135deg,
-#0088ff,
-#02e1ff
+0088ff,
+02e1ff
 );
 
 color:white;
@@ -1855,7 +1855,7 @@ padding:80px;
 
 .preview-card{
 
-background:#1b2944;
+background:1b2944;
 
 border-radius:24px;
 
@@ -1895,7 +1895,7 @@ margin-bottom:15px;
 
 .preview-content p{
 
-color:#9db0d6;
+color:9db0d6;
 
 line-height:1.8;
 
@@ -1909,7 +1909,7 @@ display:inline-block;
 
 padding:14px 28px;
 
-background:#3b82f6;
+background:3b82f6;
 
 border-radius:12px;
 
@@ -1940,7 +1940,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 
-background:#10213f;
+background:10213f;
 
 border-radius:50%;
 
@@ -1958,6 +1958,6 @@ transition:.3s;
 
 transform:translateY(-5px);
 
-background:#3b82f6;
+background:3b82f6;
 
 }
