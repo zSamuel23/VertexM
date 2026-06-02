@@ -2118,3 +2118,96 @@ color:#9db0d6;
 font-size:16px;
 
 }
+.history-section,
+.survey,
+.admin{
+
+padding:150px 80px;
+
+max-width:1000px;
+
+margin:auto;
+
+}
+
+.history-card,
+.admin-card{
+
+background:#1b2944;
+
+padding:25px;
+
+margin-bottom:20px;
+
+border-radius:20px;
+
+}
+
+.pending{
+
+background:#f59e0b;
+
+padding:8px 15px;
+
+border-radius:999px;
+
+}
+
+.approved{
+
+background:#14b8a6;
+
+padding:8px 15px;
+
+border-radius:999px;
+
+}
+
+.approve{
+
+background:#14b8a6;
+
+border:none;
+
+padding:12px 20px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+}
+
+.reject{
+
+background:#ef4444;
+
+border:none;
+
+padding:12px 20px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+margin-left:10px;
+
+}
+
+.survey textarea,
+.survey select{
+
+width:100%;
+
+padding:18px;
+
+margin-bottom:15px;
+
+background:#10213f;
+
+border:none;
+
+border-radius:14px;
+
+color:white;
+
+}
